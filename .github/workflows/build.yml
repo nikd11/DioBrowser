@@ -10,9 +10,10 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build iOS App
+      - name: Build iOS App (Simulator)
         run: |
           xcodebuild -project DioBrowser.xcodeproj \
             -scheme DioBrowser \
-            -destination 'generic/platform=iOS' \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
             build
