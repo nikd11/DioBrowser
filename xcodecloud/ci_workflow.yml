@@ -1,0 +1,20 @@
+workflow:
+  name: Build and Test
+  on:
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
+  
+  actions:
+    build-and-test:
+      actions:
+        - build
+        - test
+        - archive
+      configuration:
+        platform: iOS
+        xcode: latest
+        destination: generic/iOS
