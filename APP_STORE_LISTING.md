@@ -119,7 +119,7 @@ schnell, privat, chrome alternative
 ~2 MB (lightweight!)
 
 ### Price
-$0.99 (or free with premium features)
+$0.99 (one-time purchase)
 
 ### Age Rating
 4+ (Everyone)
@@ -203,19 +203,19 @@ $0.99 (or free with premium features)
 ## 📄 Support Information
 
 ### Developer
-Your Name/Company
+**Dio Kal**
 
 ### Website
-lightbrowser.app (create this!)
+https://dio-browser.github.io/DioBrowser/
 
 ### Support Email
-support@lightbrowser.app
+support@diodev1@icloud.com
 
 ### Privacy Policy URL
-[Your privacy policy URL]
+https://dio-browser.github.io/DioBrowser/privacy.html
 
 ### Terms of Service URL
-[Your ToS URL]
+https://dio-browser.github.io/DioBrowser/terms.html
 
 ---
 

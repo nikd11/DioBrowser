@@ -2,7 +2,7 @@ name: DioBrowser
 options:
   bundleIdPrefix: com.lightbrowser
   deploymentTarget:
-    iOS: "15.0"
+    iOS: "18.0"
   xcodeVersion: "15.0"
   generateEmptyDirectories: true
 

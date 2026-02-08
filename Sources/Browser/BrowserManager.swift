@@ -1,24 +1,27 @@
 import SwiftUI
 import WebKit
 
-class BrowserManager: ObservableObject {
+class BrowserManager: NSObject, ObservableObject {
     @Published var urlText: String = ""
     @Published var isLoading: Bool = false
     @Published var showTabs: Bool = false
     @Published var currentTab: Int = 0
     
-    let webView: WKWebView
-    private var tabs: [WKWebView] = []
+    var webView: WKWebView
+    var tabs: [WKWebView] = []
     
-    init() {
+    override init() {
         let config = WKWebViewConfiguration()
         config.preferences.javaScriptEnabled = true
         config.preferences.javaScriptCanOpenWindowsAutomatically = false
         
         // Enable privacy features
-        config.websiteDataStore.nonPersistent()
+        config.websiteDataStore = .nonPersistent()
         
         webView = WKWebView(frame: .zero, configuration: config)
+        
+        super.init()
+        
         webView.navigationDelegate = self
         
         // Add initial tab
@@ -74,7 +77,7 @@ class BrowserManager: ObservableObject {
     
     func addTab() {
         let config = WKWebViewConfiguration()
-        config.websiteDataStore.nonPersistent()
+        config.websiteDataStore = .nonPersistent()
         
         let newWebView = WKWebView(frame: .zero, configuration: config)
         newWebView.navigationDelegate = self
@@ -123,3 +126,4 @@ extension BrowserManager: WKNavigationDelegate {
         isLoading = false
     }
 }
+
